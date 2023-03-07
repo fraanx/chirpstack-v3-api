@@ -5,8 +5,8 @@ package api
 
 import (
 	fmt "fmt"
-	_ "github.com/brocaar/chirpstack-api/go/v3/common"
-	gw "github.com/brocaar/chirpstack-api/go/v3/gw"
+	_ "github.com/fraanx/chirpstack-v3-api/go/v3/common"
+	gw "github.com/fraanx/chirpstack-v3-api/go/v3/gw"
 	proto "github.com/golang/protobuf/proto"
 	_ "github.com/golang/protobuf/ptypes/duration"
 	timestamp "github.com/golang/protobuf/ptypes/timestamp"

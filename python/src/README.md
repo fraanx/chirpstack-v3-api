@@ -13,7 +13,7 @@ pip install chirpstack-api
 All messages, services, constants, etc. are auto-generated from the ChirpStack protobuf definitions. The result is that
 this package structure matches that of the protobuf definitions.
 
-The protobuf definitions can be found here: https://github.com/brocaar/chirpstack-api/tree/master/protobuf
+The protobuf definitions can be found here: https://github.com/fraanx/chirpstack-v3-api/tree/master/protobuf
 
 ## Links
 

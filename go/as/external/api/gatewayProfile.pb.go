@@ -6,7 +6,7 @@ package api
 import (
 	context "context"
 	fmt "fmt"
-	common "github.com/brocaar/chirpstack-api/go/v3/common"
+	common "github.com/fraanx/chirpstack-v3-api/go/v3/common"
 	proto "github.com/golang/protobuf/proto"
 	duration "github.com/golang/protobuf/ptypes/duration"
 	empty "github.com/golang/protobuf/ptypes/empty"
