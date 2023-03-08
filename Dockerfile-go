@@ -1,6 +1,6 @@
 FROM golang:1.16.4-alpine
 
-ENV PROJECT_PATH=/chirpstack-api
+ENV PROJECT_PATH=/chirpstack-v3-api
 RUN apk add --no-cache make git bash protobuf protobuf-dev
 
 RUN mkdir -p $PROJECT_PATH

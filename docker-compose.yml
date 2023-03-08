@@ -1,19 +1,19 @@
 version: "2"
 services:
-  chirpstack-api-go:
+  chirpstack-v3-api-go:
     build:
       context: .
       dockerfile: Dockerfile-go
     command: bash -c "cd go && make all"
     volumes:
-      - ./:/chirpstack-api
+      - ./:/chirpstack-v3-api
   chirpstack-api-swagger:
     build:
       context: .
       dockerfile: Dockerfile-go
     command: bash -c "cd swagger && make all"
     volumes:
-      - ./:/chirpstack-api
+      - ./:/chirpstack-v3-api
   chirpstack-api-js:
     environment:
       - VERSION=3.12.4
@@ -22,7 +22,7 @@ services:
       dockerfile: Dockerfile-js
     command: bash -c "cd js && make all"
     volumes:
-      - ./:/chirpstack-api
+      - ./:/chirpstack-v3-api
   chirpstack-api-rust:
     environment:
       - VERSION=3.12.4
@@ -31,7 +31,7 @@ services:
       dockerfile: Dockerfile-rust
     command: bash -c "cd rust && make all"
     volumes:
-      - ./:/chirpstack-api
+      - ./:/chirpstack-v3-api
   chirpstack-api-python:
     environment:
       - VERSION=3.12.4
@@ -40,8 +40,8 @@ services:
       dockerfile: Dockerfile-python
     command: bash -c "cd python && make all"
     volumes:
-      - ./:/chirpstack-api
-  chirpstack-api-java:
+      - ./:/chirpstack-v3-api
+  chirpstack-v3-api-java:
     environment:
       - VERSION=3.12.4
     build:
@@ -49,7 +49,7 @@ services:
       dockerfile: Dockerfile-java
     command: bash -c "cd java && make all"
     volumes:
-      - ./:/chirpstack-api
+      - ./:/chirpstack-v3-api
   chirpstack-api-java-current-user:
     user: ${CURRENT_UID}
     environment:
@@ -60,5 +60,5 @@ services:
       dockerfile: Dockerfile-java
     command: bash -c "cd java && make -f Makefile-user all"
     volumes:
-      - ./:/chirpstack-api
+      - ./:/chirpstack-v3-api
       - ${CURRENT_HOME}/.m2:/var/maven/.m2
