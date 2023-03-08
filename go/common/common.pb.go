@@ -82,6 +82,8 @@ const (
 	Region_RU864 Region = 10
 	// ISM2400 (LoRaWAN 2.4 GHz)
 	Region_ISM2400 Region = 11
+	// SS001
+	Region_SS001 = 15
 )
 
 var Region_name = map[int32]string{
@@ -99,6 +101,7 @@ var Region_name = map[int32]string{
 	9:  "IN865",
 	10: "RU864",
 	11: "ISM2400",
+	15: "SS001",
 }
 
 var Region_value = map[string]int32{
@@ -116,6 +119,7 @@ var Region_value = map[string]int32{
 	"IN865":   9,
 	"RU864":   10,
 	"ISM2400": 11,
+	"SS001": 15,
 }
 
 func (x Region) String() string {
